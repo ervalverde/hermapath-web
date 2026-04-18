@@ -1,0 +1,154 @@
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1,
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero,
+  .page-hero,
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .hero-text h1,
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-heading h2,
+  .cta-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid,
+  .services-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-box {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
+  .hero-text h1,
+  .page-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .section-heading h2,
+  .cta-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn,
+  .btn-nav {
+    width: 100%;
+  }
+
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .tag {
+    font-size: 0.84rem;
+    padding: 8px 14px;
+  }
+
+  .service-card,
+  .benefit-item,
+  .process-step,
+  .mini-card,
+  .chatbot-placeholder {
+    padding: 22px 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .chatbot-floating {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chatbot-window {
+    width: calc(100vw - 24px);
+    height: 72vh;
+    right: 0;
+    bottom: 84px;
+  }
+
+  .chatbot-toggle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .chatbot-toggle img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .chatbot-header-info img {
+    width: 38px;
+    height: 38px;
+  }
+}
