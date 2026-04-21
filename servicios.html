@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 
 <body>
@@ -19,12 +20,14 @@
 <header class="header">
   <div class="container navbar">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo/hermapath-logo.png">
+      <img src="assets/img/logo/hermapath-logo.png" alt="Logo HermaPath" />
     </a>
 
     <nav class="nav">
       <a href="index.html">Inicio</a>
-      <a href="services.html">Servicios</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Conózcanos</a>
+      <a href="#proceso">Proceso</a>
       <a href="contacto.html" class="btn-nav">Contáctenos</a>
     </nav>
   </div>
@@ -185,6 +188,87 @@
 </section>
 
 </main>
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/img/logo/hermapath-logo.png" alt="Logo HermaPath" />
+        <p>
+          Automatización inteligente para negocios que desean crecer con orden,
+          innovación y experiencia digital.
+        </p>
+      </div>
 
+      <div class="footer-links">
+        <h4>Enlaces</h4>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Conózcanos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>hermapath@email.com</p>
+        <p>Costa Rica</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 HermaPath. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- CHATBOT FLOATING BUTTON -->
+  <div class="chatbot-floating">
+    <button class="chatbot-toggle" id="chatbot-toggle">
+      <img src="assets/img/icons/chatbot-icon.png" alt="Chatbot HermaPath" />
+    </button>
+
+    <div class="emma-tooltip" id="emma-tooltip">
+      Hola, soy Emma 👋
+    </div>
+
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <img src="assets/img/icons/chatbot-icon.png" alt="Chatbot HermaPath" />
+          <div>
+            <h3>Emma</h3>
+            <p>Asistente virtual</p>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbot-close">×</button>
+      </div>
+
+      <div class="chatbot-body">
+        <div class="chat-box" id="chat-box">
+          <div class="message bot">
+            Hola, bienvenida/o. Soy Emma, la asistente virtual de HermaPath. ¿En qué le puedo ayudar hoy?
+          </div>
+
+          <div class="options" id="main-options">
+            <button onclick="handleOption('automatizar')">Quiero automatizar un proceso</button>
+            <button onclick="handleOption('chatbot')">Quiero un chatbot</button>
+            <button onclick="handleOption('powerapps')">Quiero una app en Power Apps</button>
+            <button onclick="handleOption('cotizar')">Quiero cotizar</button>
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Escriba su respuesta aquí"
+            disabled
+          />
+          <button onclick="sendMessage()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
