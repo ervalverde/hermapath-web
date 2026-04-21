@@ -157,12 +157,12 @@ body {
   gap: 8px;
   background: rgba(255, 255, 255, 0.16);
   color: var(--white);
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 999px;
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* =========================
@@ -250,7 +250,6 @@ body {
   gap: 14px;
 }
 
-/* ===== Card principal del hero ===== */
 .mini-card {
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(14px);
@@ -280,7 +279,6 @@ body {
   font-size: 0.98rem;
 }
 
-/* ===== Cuadros pequeños del hero ===== */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -312,11 +310,11 @@ body {
    PAGE HERO
 ========================= */
 .page-hero {
-  padding: 110px 0 85px;
+  padding: 72px 0 56px;
   background:
-    radial-gradient(circle at top right, rgba(124, 207, 78, 0.16), transparent 24%),
-    radial-gradient(circle at left center, rgba(39, 180, 168, 0.16), transparent 28%),
-    linear-gradient(135deg, #4b5563 0%, #426c6e 55%, #27b4a8 100%);
+    radial-gradient(circle at top right, rgba(124, 207, 78, 0.16), transparent 22%),
+    radial-gradient(circle at left center, rgba(39, 180, 168, 0.14), transparent 26%),
+    linear-gradient(135deg, #4b5563 0%, #46686a 48%, #2faea5 100%);
   color: var(--white);
   text-align: center;
   position: relative;
@@ -326,60 +324,58 @@ body {
 .page-hero::after {
   content: "";
   position: absolute;
-  width: 380px;
-  height: 380px;
-  background: rgba(124, 207, 78, 0.18);
-  filter: blur(120px);
-  top: -120px;
-  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: rgba(124, 207, 78, 0.12);
+  filter: blur(110px);
+  top: -100px;
+  right: -60px;
   pointer-events: none;
 }
 
+.page-hero .container {
+  max-width: 980px;
+}
+
 .page-hero h1 {
-  font-size: 3rem;
-  line-height: 1.15;
-  max-width: 920px;
-  margin: 18px auto;
+  font-size: 3.2rem;
+  line-height: 1.08;
+  max-width: 980px;
+  margin: 18px auto 18px;
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .page-hero p {
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
   font-size: 1.05rem;
+  line-height: 1.65;
   color: #edf7f2;
 }
 
 /* =========================
-   SECCIONES OSCURAS CON CARDS
+   SERVICES
 ========================= */
-.services,
-.benefits,
-.process {
-  background:
-    radial-gradient(circle at top right, rgba(124, 207, 78, 0.16), transparent 24%),
-    radial-gradient(circle at left center, rgba(39, 180, 168, 0.16), transparent 28%),
-    linear-gradient(135deg, #4b5563 0%, #4a7b78 55%, #2eb9b0 100%);
+.services {
+  background: #f4f7f5;
+  padding: 80px 0;
 }
 
-.services .section-heading h2,
-.services .section-heading p,
-.benefits .section-heading h2,
-.benefits .section-heading p,
-.process .section-heading h2,
-.process .section-heading p {
-  color: var(--white);
+.services .section-heading h2 {
+  color: var(--text-main);
 }
 
-.services .section-tag,
-.benefits .section-tag,
-.process .section-tag {
-  color: #d7ffb8;
+.services .section-heading p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 10px auto 0;
 }
 
-/* =========================
-   GRIDS / CARDS
-========================= */
+.services .section-tag {
+  color: var(--primary-green);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -387,11 +383,10 @@ body {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(219, 229, 223, 0.95);
+  box-shadow: 0 12px 28px rgba(55, 65, 81, 0.07);
   padding: 28px 24px;
   border-radius: 22px;
   transition: all 0.25s ease;
@@ -399,38 +394,45 @@ body {
 
 .service-card:hover {
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 38px rgba(55, 65, 81, 0.12);
+  border-color: rgba(124, 207, 78, 0.45);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
 }
 
 .service-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, rgba(39, 180, 168, 0.12), rgba(124, 207, 78, 0.14));
+  border: 1px solid rgba(39, 180, 168, 0.1);
 }
 
-.service-icon img {
-  width: 42px;
-  height: auto;
+.service-icon svg {
+  width: 30px;
+  height: 30px;
   display: block;
 }
 
-.service-card h3 {
-  font-size: 1.35rem;
-  line-height: 1.2;
-  margin-bottom: 12px;
-  color: var(--white);
-}
-
-.service-card p {
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.97rem;
+/* =========================
+   BENEFITS
+========================= */
+.benefits {
+  background: linear-gradient(135deg, #eef3f0 0%, #f7fbf8 100%);
 }
 
 .benefits-grid {
@@ -440,23 +442,46 @@ body {
 }
 
 .benefit-item {
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(219, 229, 223, 0.9);
+  box-shadow: 0 12px 28px rgba(55, 65, 81, 0.07);
   padding: 26px;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(55, 65, 81, 0.1);
 }
 
 .benefit-item h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--text-main);
 }
 
 .benefit-item p {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-secondary);
+}
+
+/* =========================
+   PROCESS
+========================= */
+.process {
+  background:
+    radial-gradient(circle at top right, rgba(124, 207, 78, 0.16), transparent 24%),
+    radial-gradient(circle at left center, rgba(39, 180, 168, 0.16), transparent 28%),
+    linear-gradient(135deg, #4b5563 0%, #4a7b78 55%, #2eb9b0 100%);
+}
+
+.process .section-heading h2,
+.process .section-heading p {
+  color: var(--white);
+}
+
+.process .section-tag {
+  color: #d7ffb8;
 }
 
 .process-grid {
@@ -573,6 +598,296 @@ body {
   color: var(--text-secondary);
   max-width: 580px;
   margin: 0 auto;
+}
+
+/* =========================
+   ABOUT / NOSOTROS
+========================= */
+.about-intro {
+  background: #f5f7f6;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.about-text-card,
+.about-highlight-card,
+.mission-card,
+.vision-card,
+.value-card,
+.difference-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(219, 229, 223, 0.9);
+  box-shadow: 0 12px 28px rgba(55, 65, 81, 0.07);
+  border-radius: 24px;
+  padding: 30px;
+  transition: all 0.25s ease;
+}
+
+.about-text-card:hover,
+.about-highlight-card:hover,
+.mission-card:hover,
+.vision-card:hover,
+.value-card:hover,
+.difference-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(55, 65, 81, 0.11);
+}
+
+.about-text-card h3,
+.about-highlight-card h3,
+.mission-card h3,
+.vision-card h3,
+.value-card h3,
+.difference-card h3 {
+  color: var(--text-main);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.about-text-card p,
+.about-highlight-card p,
+.mission-card p,
+.vision-card p,
+.value-card p,
+.difference-card p {
+  color: var(--text-secondary);
+}
+
+.about-text-card p + p {
+  margin-top: 14px;
+}
+
+.about-highlight-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-main-icon {
+  width: 90px;
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.about-mission-vision {
+  background: linear-gradient(135deg, #eef3f0 0%, #f7fbf8 100%);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.mv-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(39, 180, 168, 0.12), rgba(124, 207, 78, 0.16));
+  color: var(--primary-teal-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-values {
+  background: #f5f7f6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.about-difference {
+  background: linear-gradient(135deg, #4b5563 0%, #4a7b78 55%, #2eb9b0 100%);
+}
+
+.about-difference .section-heading h2,
+.about-difference .section-heading p {
+  color: white;
+}
+
+.about-difference .section-tag {
+  color: #d7ffb8;
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.about-difference .difference-card {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-difference .difference-card h3 {
+  color: white;
+}
+
+.about-difference .difference-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contact-info-section {
+  background: #f5f7f6;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(219, 229, 223, 0.9);
+  box-shadow: 0 12px 28px rgba(55, 65, 81, 0.07);
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(55, 65, 81, 0.11);
+}
+
+.contact-card-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(39, 180, 168, 0.12), rgba(124, 207, 78, 0.16));
+  color: var(--primary-teal-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact-card h3 {
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+}
+
+.contact-form-section {
+  background: linear-gradient(135deg, #eef3f0 0%, #f9fbfa 100%);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-form-card,
+.contact-side-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(219, 229, 223, 0.9);
+  box-shadow: 0 12px 28px rgba(55, 65, 81, 0.07);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.contact-form-card h2,
+.contact-side-card h3 {
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.contact-form-card p,
+.contact-side-card p {
+  color: var(--text-secondary);
+}
+
+.contact-side-card {
+  text-align: center;
+  position: sticky;
+  top: 110px;
+}
+
+.contact-side-icon {
+  width: 84px;
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.contact-form {
+  margin-top: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d2ddd7;
+  border-radius: 14px;
+  background: #f9fbfa;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.22s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7ccf4e;
+  box-shadow: 0 0 0 4px rgba(124, 207, 78, 0.12);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
 /* =========================
