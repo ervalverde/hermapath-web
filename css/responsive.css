@@ -13,8 +13,17 @@
     justify-content: center;
   }
 
+  .value-proposition-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 
   .process-grid {
@@ -67,6 +76,14 @@
   .section-heading h2,
   .cta-box h2 {
     font-size: 1.8rem;
+  }
+
+  .value-proposition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vp-copy {
+    text-align: center;
   }
 
   .stats-grid,
